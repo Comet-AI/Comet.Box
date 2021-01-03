@@ -14,7 +14,7 @@
 
 | S.No | Model                | Algorithm Used | Alternative Algorithm                | License |
 |------|----------------------|----------------|--------------------------------------|---------|
-| 1    | Wheat Head Detection | YoloV4         | YoloV5 or V3, EfficientDet, TFOD 1.0 |          |
-| 2    | Multi-Human Pose Detection and Tracking | FastPose       | HRNet, Simple Baseline  |     |
+| 1    | Wheat Head Detection | YoloV4         | YoloV5 or V3, EfficientDet, TFOD 1.0 |  [Apache 2.0](https://github.com/DARK-art108/CoinShift-Imaging/blob/main/LICENSE.md)      |
+| 2    | Multi-Human Pose Detection and Tracking | FastPose       | HRNet, Simple Baseline  |  [Apache 2.0](https://github.com/DARK-art108/CoinShift-Imaging/blob/main/LICENSE.md)   |
 
 
