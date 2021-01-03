@@ -7,7 +7,7 @@
 <table>
   <tr>
     <td>Wheat detection in field</td>
-    <td>ANPR Detection</td>
+    <td>Human Pose Detection</td>
   </tr>
   <tr>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/predictions%20(3).jpg" width=420 height=340></td>
