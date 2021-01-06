@@ -8,7 +8,7 @@
   <tr>
     <td>Wheat detection in field</td>
     <td>Multi-Human Pose Detection</td>
-    <td>Ship Detection in Oceans on Satellite Img</td>
+    <td>Ship Detection in Oceans on Satellite Images</td>
   </tr>
   <tr>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/predictions%20(3).jpg" width=420 height=340></td>
