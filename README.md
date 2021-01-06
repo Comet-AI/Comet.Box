@@ -15,6 +15,16 @@
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/Human_Pose.gif" width=420 height=340></td>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/ships.png" width=420 height=340></td>
   </tr>
+    <tr>
+    <td>Underwater Fish Detection</td>
+      <td>Real-Time Object Detection on Crowd</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/fish.png" width=420 height=340></td>
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/detection.gif" width=420 height=340></td>
+  </tr>
+  
+  
 </table>
   
   ## **Visit [Model Zoo DET](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20DET) for Detection Models**
