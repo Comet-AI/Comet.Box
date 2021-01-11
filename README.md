@@ -40,7 +40,7 @@
 ## Real world Segmentation Models
 <table>
    <tr>
-     <td>Real Time Segmentation on Vedios using YoloACT++</td>
+     <td>Real Time Segmentation on Vedios using YolACT++</td>
      <td>Medical Images Segementation using UNET</td>
    </tr>
    <tr>
