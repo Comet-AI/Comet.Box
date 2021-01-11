@@ -44,7 +44,7 @@
      <td>Medical Images Segementation using UNET</td>
    </tr>
    <tr>
-      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/my deepfake.gif" width=420 height=340></td>
+      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/yol.png" width=420 height=340></td>
       <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/unet.gif" width=420 height=340></td>
      
   </tr>
