@@ -36,6 +36,19 @@
       <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/my deepfake.gif" width=420 height=340></td>
   </tr>
 </table>
+
+## Real world Segmentation Models
+<table>
+   <tr>
+     <td>Real Time Segmentation on Vedios using YoloACT++</td>
+     <td>Medical Images Segementation using UNET</td>
+   </tr>
+   <tr>
+      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/my deepfake.gif" width=420 height=340></td>
+      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/unet.gif" width=420 height=340></td>
+     
+  </tr>
+</table>
       
   
   ### **🧿Visit [Model Zoo DET](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20DET) for Detection Models👓**
