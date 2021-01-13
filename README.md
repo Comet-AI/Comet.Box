@@ -9,7 +9,7 @@
 
 🚩 CoinShift Imaging Box Templates are meant for those people who have a Intermidiate Knowledge over Object Detection and Segementation models and Algorithms.
 
-🚩 CoinShift Only Provide you a Basic Template to Kick Start your intial part on any Detection or Segementation or Gans or NLP Project or Task, But you still need to add some custom cfg and other file for your datasets.
+🚩 CoinShift Only Provide you a Basic Template to Kick Start your intial part on any Detection or Segementation or Gans or NLP Project or Task, But you still need to add some custom cfg and other file according to your datasets or corpus.
 
 ## Important Elements
 
