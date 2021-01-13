@@ -70,7 +70,7 @@
   
   ### **🧿Visit [Model Zoo DET](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20DET) for Detection Models👓**
   ### **🧿Visit [Model Zoo SEG](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20SEG) for Segmentation Models👓**
-  ### **🧿NLP Model Zoo - Commming Soon!!🛩**
+  ### **🧿NLP Model Zoo - Comming Soon!!🛩**
   
   
   ### Want to Contribute or join us?
