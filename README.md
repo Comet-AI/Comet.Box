@@ -77,7 +77,7 @@
   **🚀 To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on linkedin**
    - Ritesh - [Ritesh](https://www.linkedin.com/in/ritesh-yadav2011/)
    
-  **📧To Join us Shoot a mail to**
+  **📧 To Join us Shoot a mail to**
     - [Mail Here](daydreamingguy941@gmail.com)
    
 ### Upcoming Updates
