@@ -72,8 +72,13 @@
   ### **🧿Visit [Model Zoo SEG](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20SEG) for Segmentation Models👓**
   
   
-  To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on linkedin 
-   - Ritesh - https://www.linkedin.com/in/ritesh-yadav2011/
+  ### Want to Contribute or join us?
+  
+  **🚀 To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on linkedin**
+   - Ritesh - [Ritesh](https://www.linkedin.com/in/ritesh-yadav2011/)
+   
+  **📧To Join us Shoot a mail to**
+    - [Mail Here](daydreamingguy941@gmail.com)
    
 ### Upcoming Updates
 
@@ -88,3 +93,8 @@
     - [ ] DistilBERT
     - [ ] GPT-1 and GPT-2
 - [ ] Object Tracking 
+
+
+### We love to hear from you about your feedbacks!! 🥰
+
+- Drop us a [Mail](daydreamingguy941@gmail.com)
