@@ -1,6 +1,23 @@
-# CoinShift Imaging
+# CoinShift Imaging Box
+[![HitCount](http://hits.dwyl.com/DARK-art108/CoinShift-Imaging.svg)](http://hits.dwyl.com/DARK-art108/CoinShift-Imaging)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-**CoinShift Imaging:** A collection of some use cases of ***State of the Art Object*** Detection and Segementation models.
+
+### **CoinShift Imaging Box:** A collection of efficient and faster implementation of SOTA Object Detection and Segementation Models.
+
+### **Who Can Use CoinShift Imaging Box?**
+
+🚩 CoinShift Imaging Box Templates are meant for those people who have a Intermidiate Knowledge over Object Detection and Segementation models and Algorithms.
+
+🚩 CoinShift Only Provide you a Basic Template to Kick Start your intial part on any Detection or Segementation or Gans or NLP Project or Task, But you still need to add some custom cfg and other file for your datasets.
+
+## Important Elements
+
+- A) Inference Engine
+    - Original pretrained models (from original authors and implementations) for inferencing and analysing
+    - Pretrained models on coco, voc, cityscpaes, type datasets
+    - Useful to analyse which algorithm works best for you
+    - Useful to generate semi-accurate annotations (coco, pascal-voc, yolo formats) on a new dataset
 
 
 ## Create real-world Object Detection applications 
@@ -53,5 +70,21 @@
   
   ### **🧿Visit [Model Zoo DET](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20DET) for Detection Models👓**
   ### **🧿Visit [Model Zoo SEG](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20SEG) for Segmentation Models👓**
+  
+  
+  To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on linkedin 
+   - Ritesh - https://www.linkedin.com/in/ritesh-yadav2011/
+   
+### Upcoming Updates
 
-
+- [ ] Detection Project:
+   - [ ] ANPR
+- [ ] Segmentation using:
+     - [ ] Mask-RCCN
+     - [ ] Detectron-2
+- [ ] NLP Models
+    - [ ] Fine Tune BERT
+    - [ ] Elmo Model
+    - [ ] DistilBERT
+    - [ ] GPT-1 and GPT-2
+- [ ] Object Tracking 
