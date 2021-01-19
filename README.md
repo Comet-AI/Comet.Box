@@ -1,5 +1,5 @@
 # CoinShift Imaging Box
-[![HitCount](http://hits.dwyl.com/DARK-art108/CoinShift-Imaging.svg)](http://hits.dwyl.com/DARK-art108/CoinShift-Imaging)
+[![HitCount](http://hits.dwyl.com/CoinShift-Imaging/CoinShift-Imaging-Box.svg)](http://hits.dwyl.com/CoinShift-Imaging/CoinShift-Imaging-Box)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 
