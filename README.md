@@ -35,12 +35,12 @@
     <tr>
     <td>Underwater Fish Detection</td>
       <td>Real-Time Object Detection on Crowd</td>
-      <td>Object Tracking Using Deep Sort</td>
+      <td>Real world Object Detection using Facebook DETR</td>
   </tr>
   <tr>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/fish.png" width=420 height=340></td>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/detection.gif" width=420 height=340></td>
-    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cs.jpg" width=420 height=340></td>  
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/download (2).png" width=420 height=340></td>  
   </tr>
 </table>
 
