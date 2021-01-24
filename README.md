@@ -66,11 +66,23 @@
      
   </tr>
 </table>
+
+## Natural Language Processing
+<table>
+   <tr>
+     <td>Sentence Classification using BERT Hugging Face</td>
+   </tr>
+   <tr>
+      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/BERT.jpg" width=420 height=340></td>
+      
+     
+  </tr>
+</table>
       
   
   ### **🧿Visit [Model Zoo DET](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20DET) for Detection Models👓**
   ### **🧿Visit [Model Zoo SEG](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20SEG) for Segmentation Models👓**
-  ### **🧿NLP Model Zoo - Comming Soon!!🛩**
+  ### **🧿Visit [NLP Model Zoo](https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/tree/main/NLP) for NLP SOTA Models👓**
   
   
   ### Want to Contribute or join us?
@@ -89,7 +101,7 @@
      - [ ] Mask-RCCN
      - [ ] Detectron-2
 - [ ] NLP Models
-    - [ ] Fine Tune BERT
+    - [x] Fine Tune BERT
     - [ ] Elmo Model
     - [ ] DistilBERT
     - [ ] GPT-1 and GPT-2
