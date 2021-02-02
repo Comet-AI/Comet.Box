@@ -42,6 +42,18 @@
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/detection.gif" width=420 height=340></td>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/download (2).png" width=420 height=340></td>  
   </tr>
+    <tr>
+      <td>Car Detection using YoloV5</td>
+      <td>Object Detection using RetinaNET</td>
+      <td>Human Pose Detection using HRNET</td>
+    </tr>
+  <tr>
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cae_Detc.jpg" width=420 height=340></td>
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cs.jpg" width=420 height=340></td>
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/download (1).mp4" width=420 height=340></td>
+      
+  </tr>
+        
 </table>
 
 ## Gans and Transformer Applications
@@ -59,10 +71,13 @@
    <tr>
      <td>Real Time Segmentation on Vedios using YolACT++</td>
      <td>Medical Images Segementation using UNET</td>
+     <td>Object Segmentation using Mask-RCNN</td>
    </tr>
    <tr>
       <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/yol.png" width=420 height=340></td>
       <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/unet.gif" width=420 height=340></td>
+      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/seg_obj.png" width=420 height=340></td>
+      
      
   </tr>
 </table>
