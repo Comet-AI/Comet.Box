@@ -1,5 +1,7 @@
-# CoinShift Imaging Box
-[![HitCount](http://hits.dwyl.com/CoinShift-Imaging/CoinShift-Imaging-Box.svg)](http://hits.dwyl.com/CoinShift-Imaging/CoinShift-Imaging-Box)
+# CoinShift Imaging Box 📦📦
+![GitHub contributors](https://img.shields.io/github/contributors/CoinShift-Imaging/CoinShift-Imaging-Box?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/CoinShift-Imaging/CoinShift-Imaging-Box?style=social)
+![GitHub issues](https://img.shields.io/github/issues/CoinShift-Imaging/CoinShift-Imaging-Box)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 
@@ -49,9 +51,7 @@
     </tr>
   <tr>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cae_Detc.jpg" width=420 height=340></td>
-    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cs.jpg" width=420 height=340></td>
-    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/download (1).mp4" width=420 height=340></td>
-      
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cs.jpg" width=420 height=340></td>      
   </tr>
         
 </table>
