@@ -51,7 +51,9 @@
     </tr>
   <tr>
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cae_Detc.jpg" width=420 height=340></td>
-    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cs.jpg" width=420 height=340></td>      
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/cs.jpg" width=420 height=340></td>
+    <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/HRNET.gif" width=420 height=340></td>
+      
   </tr>
         
 </table>
