@@ -4,8 +4,23 @@
 ![GitHub issues](https://img.shields.io/github/issues/CoinShift-Imaging/CoinShift-Imaging-Box)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-
 ### **CoinShift Imaging Box:** A collection of efficient and faster implementation of SOTA Object Detection and Segementation Models.
+
+### Why CoinShift Imaging?
+
+* Want to get Started with Advanced Computer Vision and NLP?
+    * Coinshift Provides you a large variety of Computer Vision and NLP Pipelines.
+    
+* Want to run high end latest Sate of the Art Models, but lack of GPU and RAM?
+    * All implementation in CoinShift is done using Google Collab or Kaggle Kernals
+    
+### Some key Features!!
+
+``` 
+* Run Training and Inference in one place.
+* All implementation of NLP Task are done by using Hugging Face.
+* Train your model over custome data very easily.
+```
 
 ### **Who Can Use CoinShift Imaging Box?**
 
