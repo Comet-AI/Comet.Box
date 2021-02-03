@@ -1,4 +1,6 @@
 # CoinShift Imaging Box 📦📦
+<img align="right" width="159px" src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/output-onlinepngtools.png">
+
 ![GitHub contributors](https://img.shields.io/github/contributors/CoinShift-Imaging/CoinShift-Imaging-Box?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/CoinShift-Imaging/CoinShift-Imaging-Box?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/CoinShift-Imaging/CoinShift-Imaging-Box)
