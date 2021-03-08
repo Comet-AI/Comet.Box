@@ -105,9 +105,11 @@
 <table>
    <tr>
      <td>Sentence Classification using BERT Hugging Face</td>
+      <td>Question/Answering using DistillBERT</td>
    </tr>
    <tr>
       <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/BERT.jpg" width=420 height=340></td>
+      <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/Q.png" width=420 height=340></td>
       
      
   </tr>
@@ -137,7 +139,7 @@
 - [ ] NLP Models
     - [x] Fine Tune BERT
     - [ ] Elmo Model
-    - [ ] DistilBERT
+    - [x] DistilBERT
     - [ ] GPT-1 and GPT-2
 - [ ] Object Tracking 
 
