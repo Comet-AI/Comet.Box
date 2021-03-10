@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Sloth-Panda",
+      "name": "Achyut Kumar Panda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70213384?v=4",
+      "profile": "https://github.com/Sloth-Panda",
+      "contributions": [
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "CoinShift-Imaging-Box",
+  "projectOwner": "CoinShift-Imaging",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
