@@ -75,6 +75,13 @@
     <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/HRNET.gif" width=420 height=340></td>
       
   </tr>
+    <tr>
+      <td>Mask Detection using CNN</td>
+    </tr>
+     <tr>
+    <td><img src="https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/blob/main/Face%20Mask%20Detection/Sample_image_1.jpg" width=420 height=340></td>
+  </tr>
+    
         
 </table>
 
