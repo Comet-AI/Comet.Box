@@ -1,0 +1,10 @@
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ../OIDv6_ToolKit_Download_Open_Images_Support_Yolo_Format/OID/Dataset/train/Tiger/images/
+val: ../OIDv6_ToolKit_Download_Open_Images_Support_Yolo_Format/OID/Dataset/validation/Tiger/images/
+
+# number of classes
+nc: 1
+
+# class names
+names: ['Tiger']
