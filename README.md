@@ -180,6 +180,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Sloth-Panda"><img src="https://avatars.githubusercontent.com/u/70213384?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Achyut Kumar Panda</b></sub></a><br /><a href="#design-Sloth-Panda" title="Design">🎨</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/sudip4-ghosh"><img src="https://avatars.githubusercontent.com/u/60208804?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sudip Ghosh</b></sub></a><br /><a href="#tutorial-sudipg4112001" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://github.com/arnab031"><img src="https://avatars.githubusercontent.com/u/51916075?v=4?s=100" width="100px;" alt=""/><br /><sub><b>arnab031</b></sub></a><br /><a href="#tutorial-arnab031" title="Tutorials">✅</a> <a href="#design-arnab031" title="Design">🎨</a></td>
     <td align="center"><a href="https://khareyash05.github.io/cv-css-js/"><img src="https://avatars.githubusercontent.com/u/60147732?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Khare</b></sub></a><br /><a href="#tutorial-khareyash05" title="Tutorials">✅</a></td>
   </tr>
 </table>
