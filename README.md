@@ -111,6 +111,17 @@
   </tr>
 </table>
 
+## Classification Model's
+<table>
+   <tr>
+     <td>COVID-19 Radiography Classification using Resnet15</td>
+   </tr>
+   <tr>
+      <td><img src="https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/blob/main/Classification_Zoo/Sample_Image.png" width=400 height=340></td>
+  </tr>
+</table>
+
+
 ## Natural Language Processing
 <table>
    <tr>
@@ -129,7 +140,7 @@
   ### **🧿Visit [Model Zoo DET](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20DET) for Detection Models👓**
   ### **🧿Visit [Model Zoo SEG](https://github.com/DARK-art108/CoinShift-Imaging/tree/main/Model%20Zoo%20SEG) for Segmentation Models👓**
   ### **🧿Visit [NLP Model Zoo](https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/tree/main/NLP) for NLP SOTA Models👓**
-  
+  ### **🧿Visit [Classification Model Zoo](https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/tree/main/Classification_Zoo) for Classification Models👓**
   
   ### Want to Contribute or join us?
   
