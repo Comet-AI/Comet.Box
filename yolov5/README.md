@@ -46,7 +46,7 @@ $ pip install -r requirements.txt
 
 YOLOv5 may be run in any of the following up-to-date verified environments (with all dependencies including [CUDA](https://developer.nvidia.com/cuda)/[CUDNN](https://developer.nvidia.com/cudnn), [Python](https://www.python.org/) and [PyTorch](https://pytorch.org/) preinstalled):
 
-- **Google Colab ** notebook with free GPU: <a href="https://colab.research.google.com/drive/1aIH7xVRIxtQLqr88YCfoZk7QWUcCHeIN?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> 
+- **Google Colab** notebook with free GPU: <a href="https://colab.research.google.com/drive/1aIH7xVRIxtQLqr88YCfoZk7QWUcCHeIN?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> 
 
 ## Inference
 
