@@ -173,24 +173,16 @@
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+### Thanks goes to these wonderful people
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/Sloth-Panda"><img src="https://avatars.githubusercontent.com/u/70213384?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Achyut Kumar Panda</b></sub></a><br /><a href="#design-Sloth-Panda" title="Design">🎨</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/sudip4-ghosh"><img src="https://avatars.githubusercontent.com/u/60208804?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sudip Ghosh</b></sub></a><br /><a href="#tutorial-sudipg4112001" title="Tutorials">✅</a></td>
-    <td align="center"><a href="https://github.com/arnab031"><img src="https://avatars.githubusercontent.com/u/51916075?v=4?s=100" width="100px;" alt=""/><br /><sub><b>arnab031</b></sub></a><br /><a href="#tutorial-arnab031" title="Tutorials">✅</a> <a href="#design-arnab031" title="Design">🎨</a></td>
-    <td align="center"><a href="https://khareyash05.github.io/cv-css-js/"><img src="https://avatars.githubusercontent.com/u/60147732?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Khare</b></sub></a><br /><a href="#tutorial-khareyash05" title="Tutorials">✅</a></td>
-    <td align="center"><a href="https://animesh-007.github.io/"><img src="https://avatars.githubusercontent.com/u/53366877?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Animesh Gupta</b></sub></a><br /><a href="#tutorial-animesh-007" title="Tutorials">✅</a></td>
-  </tr>
+	<tr>
+		<td>
+			<a href="https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=CoinShift-Imaging/CoinShift-Imaging-Box" />
+</a>
+		</td>
+	</tr>
 </table>
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
