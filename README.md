@@ -77,9 +77,11 @@
   </tr>
     <tr>
       <td>Mask Detection using CNN</td>
+   <td>Tiger Detection in wild using Yolov5</td>
     </tr>
      <tr>
     <td><img src="https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/blob/main/Face%20Mask%20Detection/Sample_image_1.jpg" width=420 height=340></td>
+    <td><img src="https://user-images.githubusercontent.com/53366877/111079022-25863e80-851e-11eb-9165-ad93b7124d57.jpg" width=420 height=340></td>
   </tr>
     
         
