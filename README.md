@@ -116,7 +116,7 @@
 ## Classification Model's
 <table>
    <tr>
-     <td>COVID-19 Radiography Classification using Resnet15</td>
+     <td>COVID-19 Radiography Classification using Resnet18</td>
    </tr>
    <tr>
       <td><img src="https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box/blob/main/Classification_Zoo/Sample_Image.png" width=400 height=340></td>
