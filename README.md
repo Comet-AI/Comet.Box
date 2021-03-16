@@ -91,9 +91,11 @@
 <table>
    <tr>
      <td>DeepFakes using GANS and AutoEncoders</td>
+	<td>CGans on MNIST</td>
    </tr>
    <tr>
       <td><img src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/my deepfake.gif" width=420 height=340></td>
+	   <td><img src="https://i.postimg.cc/FKD29bT6/digitmnist-cgan.gif" width=420 height=340></td>
   </tr>
 </table>
 
