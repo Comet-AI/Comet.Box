@@ -102,7 +102,7 @@
 ## Real world Segmentation Models
 <table>
    <tr>
-     <td>Real Time Segmentation on Vedios using YolACT++</td>
+     <td>Real Time Segmentation on Videos using YolACT++</td>
      <td>Medical Images Segementation using UNET</td>
      <td>Object Segmentation using Mask-RCNN</td>
    </tr>
