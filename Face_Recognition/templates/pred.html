@@ -1,0 +1,61 @@
+{% extends layout.html %}
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="statics/main.css">
+<style>   
+.bg{
+height: 200px;
+background-image: radial-gradient(#2D4078, #534FA7);
+background-size:cover; 
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+</style>
+</head>
+<body class="bg">
+<h1 style="color:#F99287;" align="center"><strong><i>Welcome</i></strong> to detection of urls page.</h1>
+<br><br>
+
+<h2>Paste the url link</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filename %}
+	<div class="form-group">
+		<img class="center" src="{{ url_for('display_image', filename=filename) }}" >
+	</div>
+	<div style="color:#F7E86F;" align="center">
+	<h2>{{name}}</h2>
+	</div>
+{% endif %}
+<form method="post" action="/" enctype="multipart/form-data" class="form-group">
+
+    <div class="col">
+		<input class="form-control" type="text" name="file" autocomplete="off" required>
+		<div class="col-sm-5">
+          
+        </div>
+		
+	</div>
+    <br>
+    <div class="col">
+		<input class="btn btn-primary" type="submit" value="Submit">
+	</div>
+    
+</form>
+{% endblock %}
