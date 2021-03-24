@@ -9,17 +9,12 @@
              * Python(Flask as Backend)
              
 
-Screen Shot of the Model : [SS](Resources/Here.png)
-
-
 # To Run Model in :
 1. Download all requirements 
 2. Download The Dataset : [Here](https://www.tensorflow.org/datasets/catalog/imagenet2012) This step is not compulsary if you wish to download the Trained model directly.
 3. Run the Notebook to generate H5 File ```Image_Classification.ipynb``` or Download it [Here](https://drive.google.com/file/d/1DnGvosMhZuYx-y9f_5DmdP79i-CfnaJT/view?usp=sharing)
 4. Now run command ```python app.py```
 5. And Boom !! There is you're WebApp
-
-
 
 
 ## Refrences: https://cs224d.stanford.edu/reports/BartleAric.pdf
