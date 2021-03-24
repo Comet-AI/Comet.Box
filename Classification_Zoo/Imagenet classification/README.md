@@ -9,7 +9,7 @@
              * Python(Flask as Backend)
              
 
-Screen Shot of the Model : [SS](ReadMe_Resources/Here.png)
+Screen Shot of the Model : [SS](Resources/Here.png)
 
 
 # To Run Model in :
@@ -22,5 +22,6 @@ Screen Shot of the Model : [SS](ReadMe_Resources/Here.png)
 
 
 
-# Refrences: https://cs224d.stanford.edu/reports/BartleAric.pdf
-# H5 File : [Download](https://drive.google.com/file/d/1DnGvosMhZuYx-y9f_5DmdP79i-CfnaJT/view?usp=sharing)
+## Refrences: https://cs224d.stanford.edu/reports/BartleAric.pdf
+
+## H5 File : [Download](https://drive.google.com/file/d/1DnGvosMhZuYx-y9f_5DmdP79i-CfnaJT/view?usp=sharing)
