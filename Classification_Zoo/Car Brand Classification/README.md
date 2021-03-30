@@ -10,7 +10,7 @@
              * Python(Flask as Backend)
              
 
-Screen Shot of the Model : [SS]()
+Screen Shot of the Model : [SS](Lambo.png)
 
 
 # To Run Model in :
