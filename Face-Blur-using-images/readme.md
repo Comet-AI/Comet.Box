@@ -1,6 +1,6 @@
 ### Intro:
 
-Face blurring is a computer vision method used to anonymize faces in images and video. In this project, I have used Deep Learning based Face Detector to detect the face we need to blur. **OneAPI** will be incorporated to make using the code easier in every machine. 
+Face blurring is a computer vision method used to anonymize faces in images and video. Here, Deep Learning based Face Detector is used to detect the face we need to blur. **OneAPI** will be incorporated to make using the code easier in every machine. 
 
 ### Methodology:
 The process of face blurring process.
