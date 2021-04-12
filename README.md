@@ -9,37 +9,37 @@
 ![GitHub issues](https://img.shields.io/github/issues/CoinShift-Imaging/CoinShift-Imaging-Box)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-### **CoinShift Imaging Box:** A collection of efficient and faster implementation of SOTA Object Detection and Segementation Models.
+### **CoinShift Imaging Box:** A collection of efficient and fast implementation of SOTA Object Detection and Segementation Models.
 
 ### Why CoinShift Imaging?
 
 * Want to get Started with Advanced Computer Vision and NLP?
-    * Coinshift Provides you a large variety of Computer Vision and NLP Pipelines.
+    * Coinshift provides you a large variety of Computer Vision and NLP pipelines.
     
-* Want to run high end latest Sate of the Art Models, but lack of GPU and RAM?
+* Want to run high end, latest state of the art models, but you lack GPU and RAM?
     * All implementation in CoinShift is done using Google Collab or Kaggle Kernals
     
 ### Some key Features!!
 
 ``` 
-* Run Training and Inference in one place.
-* All implementation of NLP Task are done by using Hugging Face.
+* Run training and inference in one place.
+* All the implementation of NLP tasks are done by using Hugging Face.
 * Train your model over custome data very easily.
 ```
 
-### **Who Can Use CoinShift Imaging Box?**
+### **Who can use the CoinShift Imaging Box?**
 
-🚩 CoinShift Imaging Box Templates are meant for those people who have a Intermidiate Knowledge over Object Detection and Segementation models and Algorithms.
+🚩 CoinShift Imaging Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models and Algorithms.
 
-🚩 CoinShift Only Provide you a Basic Template to Kick Start your intial part on any Detection or Segementation or Gans or NLP Project or Task, But you still need to add some custom cfg and other file according to your datasets or corpus.
+🚩 CoinShift only provides you a basic template to kick start your initial part on any Detection, Segementation, Gans, NLP project or task. You would still need to add some custom cfg and other files according to your datasets or corpus.
 
 ## Important Elements
 
 - A) Inference Engine
-    - Original pretrained models (from original authors and implementations) for inferencing and analysing
-    - Pretrained models on coco, voc, cityscpaes, type datasets
-    - Useful to analyse which algorithm works best for you
-    - Useful to generate semi-accurate annotations (coco, pascal-voc, yolo formats) on a new dataset
+    - Original pretrained models (from original authors and implementations) for inferencing and analysing.
+    - Pretrained models on coco, voc, cityscpaes, type datasets.
+    - Useful to analyse which algorithm works best for you.
+    - Useful to generate semi-accurate annotations (coco, pascal-voc, yolo formats) on a new dataset.
 
 
 ## Create real-world Object Detection applications 
@@ -169,13 +169,13 @@
 - [ ] Object Tracking 
 
 
-### We love to hear from you about your feedbacks!! 🥰
+### We would love to hear from you about your feedbacks!! 🥰
 
 - Drop us a [Mail](daydreamingguy941@gmail.com)
 
 ## Contributors ✨
 
-### Thanks goes to these wonderful people
+### Thanks to these wonderful people
 
 <table>
 	<tr>
