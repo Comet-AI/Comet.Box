@@ -16,29 +16,29 @@
 * Want to get Started with Advanced Computer Vision and NLP?
     * Coinshift provides you a large variety of Computer Vision and NLP pipelines.
     
-* Want to run high end, latest state of the art models, but you lack GPU and RAM?
-    * All implementation in CoinShift is done using Google Collab or Kaggle Kernals
+* Want to run high-end, the latest state-of-the-art models, but you lack GPU and RAM?
+    * All implementation in CoinShift is done using Google Collab or Kaggle Kernels
     
 ### Some key Features!!
 
 ``` 
 * Run training and inference in one place.
-* All the implementation of NLP tasks are done by using Hugging Face.
-* Train your model over custome data very easily.
+* All the implementation of NLP tasks is done by using Hugging Face.
+* Train your model over customer data very easily.
 ```
 
 ### **Who can use the CoinShift Imaging Box?**
 
-🚩 CoinShift Imaging Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models and Algorithms.
+🚩 CoinShift Imaging Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models, and Algorithms.
 
 🚩 CoinShift only provides you a basic template to kick start your initial part on any Detection, Segementation, Gans, NLP project or task. You would still need to add some custom cfg and other files according to your datasets or corpus.
 
 ## Important Elements
 
 - A) Inference Engine
-    - Original pretrained models (from original authors and implementations) for inferencing and analysing.
+    - Original pre-trained models (from original authors and implementations) for inferencing and analyzing.
     - Pretrained models on coco, voc, cityscpaes, type datasets.
-    - Useful to analyse which algorithm works best for you.
+    It- Useful to analyze which algorithm works best for you.
     - Useful to generate semi-accurate annotations (coco, pascal-voc, yolo formats) on a new dataset.
 
 
@@ -148,7 +148,7 @@
   
   ### Want to Contribute or join us?
   
-  **🚀 To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on linkedin**
+  **🚀 To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on LinkedIn**
    - Ritesh - [Ritesh](https://www.linkedin.com/in/ritesh-yadav2011/)
    
   **📧 To Join us Shoot a mail to**
@@ -169,7 +169,7 @@
 - [ ] Object Tracking 
 
 
-### We would love to hear from you about your feedbacks!! 🥰
+### We would love to hear from you about your feedback!! 🥰
 
 - Drop us a [Mail](daydreamingguy941@gmail.com)
 
@@ -186,5 +186,6 @@
 		</td>
 	</tr>
 </table>
+
 
 
