@@ -1,0 +1,34 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{xbCT:function(e,n,t){"use strict";t.r(n),t.d(n,"BookmarksSnackbar",(function(){return m}));var a=t("L+vz"),r=t("k6Su"),o=t("bNz0"),c=t.n(o),s=t("r0ML"),b=t("nl90");const l={light:{background:a.l,buttonHover:a.j,buttonText:a.f,label:a.c},dark:{background:a.b,buttonHover:a.c,buttonText:a.l,label:a.j}},i=c.a.div`
+  && .mdc-snackbar {
+    font-family: Inter, sans-serif;
+    z-index: ${e=>e.theme.zindex[1e3]};
+  }
+  && .mdc-snackbar__surface {
+    background-color: ${e=>l[e.theme.name].background};
+    border-radius: 12px;
+  }
+  && .mdc-snackbar__label {
+    color: ${e=>l[e.theme.name].label};
+    font-size: 14px;
+    line-height: 20px;
+  }
+  && .mdc-snackbar__actions {
+    margin-right: 16px;
+  }
+  && .mdc-snackbar__action {
+    &:hover {
+      background-color: ${e=>l[e.theme.name].buttonHover};
+    }
+  }
+  && .mdc-button__label {
+    border-radius: 12px;
+    color: ${e=>l[e.theme.name].buttonText};
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 16px;
+    text-transform: none;
+  }
+`,m=e=>{const{messages:n}=b.a;return s.createElement(i,null,s.createElement(r.a,{messages:n}))}}}]);
+//# sourceMappingURL=chunk-17-b88f5966f78b402c1f21.js.map

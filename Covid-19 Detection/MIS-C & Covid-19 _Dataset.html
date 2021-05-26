@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.kaggle.com/sudipg411/mis-c-covid-19/edit -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="react-tooltip">.__react_component_tooltip{border-radius:3px;display:inline-block;font-size:13px;left:-999em;opacity:0;padding:8px 21px;position:fixed;pointer-events:none;transition:opacity 0.3s ease-out;top:-999em;visibility:hidden;z-index:999}.__react_component_tooltip.allow_hover,.__react_component_tooltip.allow_click{pointer-events:auto}.__react_component_tooltip:before,.__react_component_tooltip:after{content:"";width:0;height:0;position:absolute}.__react_component_tooltip.show{opacity:0.9;margin-top:0px;margin-left:0px;visibility:visible}.__react_component_tooltip.type-dark{color:#fff;background-color:#222}.__react_component_tooltip.type-dark.place-top:after{border-top-color:#222;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-dark.place-bottom:after{border-bottom-color:#222;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-dark.place-left:after{border-left-color:#222;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-dark.place-right:after{border-right-color:#222;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-dark.border{border:1px solid #fff}.__react_component_tooltip.type-dark.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-dark.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-dark.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-dark.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-success{color:#fff;background-color:#8DC572}.__react_component_tooltip.type-success.place-top:after{border-top-color:#8DC572;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-success.place-bottom:after{border-bottom-color:#8DC572;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-success.place-left:after{border-left-color:#8DC572;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-success.place-right:after{border-right-color:#8DC572;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-success.border{border:1px solid #fff}.__react_component_tooltip.type-success.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-success.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-success.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-success.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-warning{color:#fff;background-color:#F0AD4E}.__react_component_tooltip.type-warning.place-top:after{border-top-color:#F0AD4E;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-warning.place-bottom:after{border-bottom-color:#F0AD4E;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-warning.place-left:after{border-left-color:#F0AD4E;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-warning.place-right:after{border-right-color:#F0AD4E;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-warning.border{border:1px solid #fff}.__react_component_tooltip.type-warning.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-warning.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-warning.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-warning.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-error{color:#fff;background-color:#BE6464}.__react_component_tooltip.type-error.place-top:after{border-top-color:#BE6464;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-error.place-bottom:after{border-bottom-color:#BE6464;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-error.place-left:after{border-left-color:#BE6464;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-error.place-right:after{border-right-color:#BE6464;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-error.border{border:1px solid #fff}.__react_component_tooltip.type-error.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-error.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-error.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-error.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-info{color:#fff;background-color:#337AB7}.__react_component_tooltip.type-info.place-top:after{border-top-color:#337AB7;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-info.place-bottom:after{border-bottom-color:#337AB7;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-info.place-left:after{border-left-color:#337AB7;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-info.place-right:after{border-right-color:#337AB7;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-info.border{border:1px solid #fff}.__react_component_tooltip.type-info.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-info.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-info.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-info.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-light{color:#222;background-color:#fff}.__react_component_tooltip.type-light.place-top:after{border-top-color:#fff;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-light.place-bottom:after{border-bottom-color:#fff;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-light.place-left:after{border-left-color:#fff;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-light.place-right:after{border-right-color:#fff;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-light.border{border:1px solid #222}.__react_component_tooltip.type-light.border.place-top:before{border-top:8px solid #222}.__react_component_tooltip.type-light.border.place-bottom:before{border-bottom:8px solid #222}.__react_component_tooltip.type-light.border.place-left:before{border-left:8px solid #222}.__react_component_tooltip.type-light.border.place-right:before{border-right:8px solid #222}.__react_component_tooltip.place-top{margin-top:-10px}.__react_component_tooltip.place-top:before{border-left:10px solid transparent;border-right:10px solid transparent;bottom:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-top:after{border-left:8px solid transparent;border-right:8px solid transparent;bottom:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-bottom{margin-top:10px}.__react_component_tooltip.place-bottom:before{border-left:10px solid transparent;border-right:10px solid transparent;top:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-bottom:after{border-left:8px solid transparent;border-right:8px solid transparent;top:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-left{margin-left:-10px}.__react_component_tooltip.place-left:before{border-top:6px solid transparent;border-bottom:6px solid transparent;right:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-left:after{border-top:5px solid transparent;border-bottom:5px solid transparent;right:-6px;top:50%;margin-top:-4px}.__react_component_tooltip.place-right{margin-left:10px}.__react_component_tooltip.place-right:before{border-top:6px solid transparent;border-bottom:6px solid transparent;left:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-right:after{border-top:5px solid transparent;border-bottom:5px solid transparent;left:-6px;top:50%;margin-top:-4px}.__react_component_tooltip .multi-line{display:block;padding:2px 0px;text-align:center}</style><meta name="viewport" content="width=device-width,initial-scale=1"><title>MIS-C &amp; Covid-19 | Kaggle</title><link href="./MIS-C &amp; Covid-19 _Dataset_files/icon" rel="stylesheet"><style>@import url('https://rsms.me/inter/inter.css');
+    @import url("https://use.typekit.net/tql2nih.css");
+
+    html,
+    body {
+      font-family: Inter, sans-serif;
+      height: 100%;
+      margin: 0;
+    }
+
+    .header {
+      padding: 0;
+    }
+
+    #root {
+      height: 100%;
+    }</style><meta name="description" content="The Kaggle Kernels IDE for Data Scientists."><link href="./MIS-C &amp; Covid-19 _Dataset_files/notebook-663c7b3f6359906853b1.css" rel="stylesheet">
+
+          <script type="text/javascript" async="" src="./MIS-C &amp; Covid-19 _Dataset_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-3l+Dzjt73YLhXz+WejlQA/r4+koQU0wEJ+YZAtKZ8DTxOPwZ54aluvUaML5sjiPl" nonce=""></script><script nonce="">window.KAGGLE_JUPYTER_PATH = "/static/dist/jupyterlab/index-bf6025f943980c5d26f7cfdec9b11117.html";</script>
+          <script nonce="">window.KAGGLE_JUPYTERLAB_PATH = "/static/dist/jupyterlab/jupyterlab-index-8f2399475d4c2734d3bfba35ef58a7af.html";</script>
+          
+<style data-styled="active" data-styled-version="5.1.0"></style><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-18-becece60902dd899634a.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-19-5ad8c8847418513c9dc0.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-9-8c3143058686fd6e8821.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-13-77e8d7010c0fa9fd2f1f.js.download"></script><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: none;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiInputBase">
+.MuiInputBase-root {
+  color: rgba(0, 0, 0, 0.87);
+  cursor: text;
+  display: inline-flex;
+  position: relative;
+  font-size: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.1875em;
+}
+.MuiInputBase-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+  cursor: default;
+}
+.MuiInputBase-multiline {
+  padding: 6px 0 7px;
+}
+.MuiInputBase-multiline.MuiInputBase-marginDense {
+  padding-top: 3px;
+}
+.MuiInputBase-fullWidth {
+  width: 100%;
+}
+.MuiInputBase-input {
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 0;
+  height: 1.1875em;
+  margin: 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiInputBase-input::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiInputBase-input::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiInputBase-input:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiInputBase-input::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiInputBase-input:focus {
+  outline: 0;
+}
+.MuiInputBase-input:invalid {
+  box-shadow: none;
+}
+.MuiInputBase-input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.MuiInputBase-input.Mui-disabled {
+  opacity: 1;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-webkit-input-placeholder {
+  opacity: 0 !important;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-moz-placeholder {
+  opacity: 0 !important;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:-ms-input-placeholder {
+  opacity: 0 !important;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-ms-input-placeholder {
+  opacity: 0 !important;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+.MuiInputBase-inputMarginDense {
+  padding-top: 3px;
+}
+.MuiInputBase-inputSelect {
+  padding-right: 24px;
+}
+.MuiInputBase-inputMultiline {
+  height: auto;
+  resize: none;
+  padding: 0;
+}
+.MuiInputBase-inputTypeSearch {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+</style><style data-jss="" data-meta="MuiInput">
+.MuiInput-root {
+  position: relative;
+}
+label + .MuiInput-formControl {
+  margin-top: 16px;
+}
+.MuiInput-underline:after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  border-bottom: 2px solid #303f9f;
+  pointer-events: none;
+}
+.MuiInput-underline.Mui-focused:after {
+  transform: scaleX(1);
+}
+.MuiInput-underline.Mui-error:after {
+  transform: scaleX(1);
+  border-bottom-color: #f44336;
+}
+.MuiInput-underline:before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "\00a0";
+  position: absolute;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  pointer-events: none;
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+}
+.MuiInput-underline.Mui-disabled:before {
+  border-bottom-style: dotted;
+}
+@media (hover: none) {
+  .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary {
+  color: #3f51b5;
+}
+.MuiIconButton-colorPrimary:hover {
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary {
+  color: #f50057;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss65 {
+  padding: 5px;
+}
+</style><style data-jss="" data-meta="MuiButton">
+.MuiButton-root {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-root:hover.Mui-disabled {
+  background-color: transparent;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.MuiButton-text {
+  padding: 6px 8px;
+}
+.MuiButton-textPrimary {
+  color: #3f51b5;
+}
+.MuiButton-textPrimary:hover {
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-textPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-textSecondary {
+  color: #f50057;
+}
+.MuiButton-textSecondary:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-textSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 5px 16px;
+}
+.MuiButton-outlined.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+.MuiButton-outlinedPrimary {
+  color: #3f51b5;
+  border: 1px solid rgba(63, 81, 181, 0.5);
+}
+.MuiButton-outlinedPrimary:hover {
+  border: 1px solid #3f51b5;
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-outlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlinedSecondary {
+  color: #f50057;
+  border: 1px solid rgba(245, 0, 87, 0.5);
+}
+.MuiButton-outlinedSecondary:hover {
+  border: 1px solid #f50057;
+  background-color: rgba(245, 0, 87, 0.08);
+}
+.MuiButton-outlinedSecondary.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-outlinedSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-contained {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12);
+  background-color: #e0e0e0;
+}
+.MuiButton-contained.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiButton-contained:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiButton-contained.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-contained:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .MuiButton-contained:hover {
+    background-color: #e0e0e0;
+  }
+}
+.MuiButton-contained:hover.Mui-disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #3f51b5;
+}
+.MuiButton-containedPrimary:hover {
+  background-color: #303f9f;
+}
+@media (hover: none) {
+  .MuiButton-containedPrimary:hover {
+    background-color: #3f51b5;
+  }
+}
+.MuiButton-containedSecondary {
+  color: #fff;
+  background-color: #f50057;
+}
+.MuiButton-containedSecondary:hover {
+  background-color: #c51162;
+}
+@media (hover: none) {
+  .MuiButton-containedSecondary:hover {
+    background-color: #f50057;
+  }
+}
+.MuiButton-colorInherit {
+  color: inherit;
+  border-color: currentColor;
+}
+.MuiButton-sizeSmall {
+  padding: 4px 8px;
+  font-size: 0.8125rem;
+}
+.MuiButton-sizeLarge {
+  padding: 8px 24px;
+  font-size: 0.9375rem;
+}
+.MuiButton-fullWidth {
+  width: 100%;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss1 {
+  color: #ffffff;
+  margin: 8px 4px 8px 0;
+  padding: 7px 0;
+  background: #00A7E5;
+  line-height: 12px;
+  text-transform: none;
+}
+.jss1:hover {
+  filter: brightness(96%);
+}
+.jss2 {
+  color: #ffffff;
+  margin: 8px 0;
+  padding: 7px 0;
+  background: #00A7E5;
+  line-height: 12px;
+  text-transform: none;
+}
+.jss2:hover {
+  filter: brightness(96%);
+}
+.jss3 {
+  color: #ffffff;
+  margin: 8px 8px 8px 12px;
+  padding: 7px 8px 7px 8px;
+  background: #00A7E5;
+  line-height: 12px;
+  text-transform: none;
+}
+.jss3:hover {
+  filter: brightness(96%);
+}
+.jss4 {
+  color: #ffffff;
+  margin: 8px 0 8px 8px;
+  padding: 7px 8px 7px 8px;
+  background: #00A7E5;
+  line-height: 12px;
+  text-transform: none;
+}
+.jss4:hover {
+  filter: brightness(96%);
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss85 {
+  padding: 6px 16px 6px 12px;
+  font-size: 14px;
+  box-shadow: none;
+  text-transform: none;
+}
+.jss85:hover {
+  filter: brightness(96%);
+}
+.jss86 {
+  font-size: 14px;
+  margin-right: 8px;
+}
+</style><style data-jss="" data-meta="MuiFormControl">
+.MuiFormControl-root {
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+}
+.MuiFormControl-marginNormal {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.MuiFormControl-marginDense {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.MuiFormControl-fullWidth {
+  width: 100%;
+}
+</style><style data-jss="" data-meta="MuiTextField">
+
+</style><style data-jss="" data-meta="makeStyles">
+.jss5 {
+  left: -8px;
+  position: relative;
+  margin-top: 6px;
+  flex-direction: row;
+}
+.jss6 {
+  margin: 2px;
+}
+.jss7 {
+  padding: 2px 7px;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  text-overflow: ellipsis;
+}
+.jss8 {
+  margin: auto 0px auto 6px;
+  padding: 0px;
+}
+.jss9 {
+  font-size: 20px;
+  visibility: hidden;
+  margin-left: 8px;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+</style><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-17-b88f5966f78b402c1f21.js.download"></script><script id="google-recaptcha-v3" src="./MIS-C &amp; Covid-19 _Dataset_files/api.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-0-ad10e87ea10d137b194a.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-15-ed57e6b9a4e9942492d6.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-12-b58992847202ed2039c1.js.download"></script><script charset="utf-8" src="./MIS-C &amp; Covid-19 _Dataset_files/chunk-10-803dd6bea201f0d60834.js.download"></script></head><body><div id="root"><div style="--mdc-theme-on-primary:#fff; --mdc-theme-on-surface:rgba(0, 0, 0, 0.87); --mdc-theme-text-primary-on-background:rgba(0, 0, 0, 0.87); --mdc-theme-text-secondary-on-background:rgba(0, 0, 0, 0.54); --mdc-theme-text-hint-on-background:rgba(0, 0, 0, 0.38); --mdc-theme-text-disabled-on-background:rgba(0, 0, 0, 0.38); --mdc-theme-text-icon-on-background:rgba(0, 0, 0, 0.38); --mdc-theme-primary:#20BEFF; --mdc-theme-error:#F58B8A; --mdc-theme-background:#F8F8F8; --mdc-theme-surface:#fff; --mdc-theme-primary-bg:#20BEFF; --mdc-theme-secondary-bg:#919294;"><div tabindex="-1" role="group" style="outline: none; height: inherit;"><div aria-live="assertive" aria-atomic="true" aria-hidden="true" class="sc-pLxQr bBExMZ mdc-snackbar mdc-snackbar--leading"><div class="mdc-snackbar__surface"><div role="status" aria-live="polite" class="mdc-snackbar__label"><div style="display: none;"></div></div><div class="mdc-snackbar__actions"></div></div></div><div class="sc-pzYib sc-pczax kXYKFE"><div class="sc-pktCe dSKYub"><div class="sc-pZaHX hCKhjF"><div class="sc-oTBUA jseVVZ"><button aria-label="menu" class="sc-AxgMl jShmvg google-material-icons">menu</button></div><a href="https://www.kaggle.com/sudipg411/mis-c-covid-19/edit#site-content" class="sc-pReKu eehIqb">Skip to<br>content</a><div class="sc-pbxSd jHwqcJ"><a href="https://www.kaggle.com/"><img src="./MIS-C &amp; Covid-19 _Dataset_files/site-logo.png" alt="Kaggle" class="sc-pJkiN kSIOTQ"></a></div></div><div class="sc-oUoif iwwQVw"><div class="sc-pcJja jwzXHh"><div class="sc-pscky cYZqjl"><div class="sc-pRtAn iEXtdO"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-pciEQ dyMLtf">search</i><input placeholder="Search" aria-label="Search" class="sc-pZOBi gTABHR" value=""></div></div></div><ul class="km-list"><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">explore</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Home</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/competitions"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">emoji_events</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Competitions</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/datasets"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">table_chart</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Datasets</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh cddVaI sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/code"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-pZnSc jEfqsK">code</i><p class="sc-fzqARJ sc-fzqNqU lcuOYI" style="padding-left: 20px;">Code</p><div class="sc-pItiW ipyRFc"></div></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/discussion"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">comment</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Discussions</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/learn"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">school</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Courses</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/sudipg411/mis-c-covid-19/edit#"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">expand_more</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">More</p></a></div></li></ul></div><div class="sc-oUDcU cnVYtu"><div><div class="sc-fzokvW hDxHTx" style="margin-bottom: 24px;"></div><span class="sc-fznzOf sc-fznMnq sc-qXRQq kIRrYH">Recently Viewed</span><div role="list"><li aria-label="MIS-C &amp; Covid-19" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/sudipg411/mis-c-covid-19?rvi=1" title="MIS-C &amp; Covid-19"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png" alt="Thumbnail for MIS-C &amp; Covid-19" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">MIS-C &amp; Covid-19</p></a></div></li><li aria-label="MIS-C &amp; Covid-19" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/mpwolke/mis-c-covid-19?rvi=1" title="MIS-C &amp; Covid-19"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/3012786-kg.JPG" alt="Thumbnail for MIS-C &amp; Covid-19" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">MIS-C &amp; Covid-19</p></a></div></li><li aria-label="MIS-C Associated with COVID-19" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/mpwolke/cusersmarildownloadsmiscpdf?rvi=1" title="MIS-C Associated with COVID-19"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/dataset-thumbnail.jpg" alt="Thumbnail for MIS-C Associated with COVID-19" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">MIS-C Associated with COVID-19</p></a></div></li><li aria-label="Covid-19 outbreak" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/mathurinache/covid19-outbreak?rvi=1" title="Covid-19 outbreak"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/dataset-thumbnail.png" alt="Thumbnail for Covid-19 outbreak" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">Covid-19 outbreak</p></a></div></li><li aria-label="[Tutorial] Analysis on Coronavirus" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/jinameliachoi/tutorial-analysis-on-coronavirus?rvi=1" title="[Tutorial] Analysis on Coronavirus"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/4527285-kg.jpg" alt="Thumbnail for [Tutorial] Analysis on Coronavirus" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">[Tutorial] Analysis on Coronavirus</p></a></div></li></div></div></div></div><div class="sc-pspzH eyABor"><div class="mdc-menu-surface--anchor"><button class="sc-kcIISf dRPzkT"><div class="sc-kMBVBR gNoRYI"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-jTwkGF llSFot">auto_awesome_motion</i><div class="sc-jYPaMM dHhBSb">0</div></div><p class="sc-fzqARJ sc-fzqNqU sc-khKixi HEXDP">View Active Events</p></button></div></div></div><div class="sc-jwDLgl eOeZVE"><div class="sc-jBFkLo ianLDQ"><div class="sc-pZaHX hCKhjF"><div class="sc-oTBUA jseVVZ"><button aria-label="menu" class="sc-AxgMl jShmvg google-material-icons">menu</button></div><a href="https://www.kaggle.com/sudipg411/mis-c-covid-19/edit#site-content" class="sc-pReKu eehIqb">Skip to<br>content</a><div class="sc-pbxSd jHwqcJ"><a href="https://www.kaggle.com/"><img src="./MIS-C &amp; Covid-19 _Dataset_files/site-logo.png" alt="Kaggle" class="sc-pJkiN kSIOTQ"></a></div></div></div><div class="sc-oUoif iwwQVw"><div class="sc-pcJja jwzXHh"><div class="sc-pscky cYZqjl"><div class="sc-pRtAn iEXtdO"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-pciEQ dyMLtf">search</i><input placeholder="Search" aria-label="Search" class="sc-pZOBi gTABHR" value=""></div></div></div><ul class="km-list"><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">explore</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Home</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/competitions"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">emoji_events</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Competitions</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/datasets"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">table_chart</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Datasets</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh cddVaI sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/code"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-pZnSc jEfqsK">code</i><p class="sc-fzqARJ sc-fzqNqU lcuOYI" style="padding-left: 20px;">Code</p><div class="sc-pItiW ipyRFc"></div></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/discussion"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">comment</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Discussions</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/learn"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">school</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">Courses</p></a></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pQSRh fStsDq"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/sudipg411/mis-c-covid-19/edit#"><i emphasis="low" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI dsqNyx sc-pZnSc jEfqsK">expand_more</i><p class="sc-fzqARJ sc-fzqNqU islgeL" style="padding-left: 20px;">More</p></a></div></li></ul></div><div><div class="sc-fzokvW hDxHTx" style="margin-bottom: 24px;"></div><span class="sc-fznzOf sc-fznMnq sc-qXRQq kIRrYH">Recently Viewed</span><div role="list"><li aria-label="MIS-C &amp; Covid-19" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/sudipg411/mis-c-covid-19?rvi=1" title="MIS-C &amp; Covid-19"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png" alt="Thumbnail for MIS-C &amp; Covid-19" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">MIS-C &amp; Covid-19</p></a></div></li><li aria-label="MIS-C &amp; Covid-19" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/mpwolke/mis-c-covid-19?rvi=1" title="MIS-C &amp; Covid-19"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/3012786-kg.JPG" alt="Thumbnail for MIS-C &amp; Covid-19" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">MIS-C &amp; Covid-19</p></a></div></li><li aria-label="MIS-C Associated with COVID-19" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/mpwolke/cusersmarildownloadsmiscpdf?rvi=1" title="MIS-C Associated with COVID-19"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/dataset-thumbnail.jpg" alt="Thumbnail for MIS-C Associated with COVID-19" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">MIS-C Associated with COVID-19</p></a></div></li><li aria-label="Covid-19 outbreak" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/mathurinache/covid19-outbreak?rvi=1" title="Covid-19 outbreak"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/dataset-thumbnail.png" alt="Thumbnail for Covid-19 outbreak" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">Covid-19 outbreak</p></a></div></li><li aria-label="[Tutorial] Analysis on Coronavirus" class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-pAncQ lhxtUm"><a class="sc-fzowVh equHBw" href="https://www.kaggle.com/jinameliachoi/tutorial-analysis-on-coronavirus?rvi=1" title="[Tutorial] Analysis on Coronavirus"><div class="sc-pQdCa eVdOXb"><img src="./MIS-C &amp; Covid-19 _Dataset_files/4527285-kg.jpg" alt="Thumbnail for [Tutorial] Analysis on Coronavirus" class="sc-pXZzD ivUHTG"></div><p class="sc-fzoyTs sc-fzoNJl sc-pIjat blnZfG">[Tutorial] Analysis on Coronavirus</p></a></div></li></div></div><div class="sc-fzokvW hDxHTx"></div><div class="mdc-menu-surface--anchor"><button class="sc-kcIISf dRPzkT"><div class="sc-kMBVBR gNoRYI"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-jTwkGF llSFot">auto_awesome_motion</i><div class="sc-jYPaMM dHhBSb">0</div></div><p class="sc-fzqARJ sc-fzqNqU sc-khKixi HEXDP">View Active Events</p></button></div></div><div data-testid="searchContainer" class="sc-jCvDMo GQxzv"><div></div><div class="sc-jHfJET fdXPeZ"><div></div></div></div><div id="site-content" class="sc-qPLKk hSjAkc"><div class="sc-qXHHN kITAEN"></div><div class="AppView-sc-16eb2j kDpcJw"><div class="Header_Body-sc-rbwidn bjkOVk"><div></div><div class="Header_MainHeader-sc-uoui3c bAUhOL"><div class="Header_MenuIconWrapper-sc-izyttq fbbxsT"><button aria-label="menu" class="sc-AxgMl jShmvg google-material-icons">menu</button></div><div class="Header_MenuWrapper-sc-19vw76b cIQeup"><div class="Header_TitleWrapper-sc-qrpum5 kHSLeG"><div class="MuiFormControl-root jss5" aria-describedby="component-error-text"><div class="TitleInput_ShrinkingTitleWrapper-sc-163ctwl jUscsk"><div class="TitleInput_TextFieldWrapper-sc-1dch7vu hKVEtE"><div class="MuiFormControl-root MuiTextField-root sc-khlDuY hofGMh jss6 MuiFormControl-fullWidth"><div class="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"><input aria-invalid="false" autocomplete="off" class="MuiInputBase-input MuiInput-input jss7" id="notebook-title-input" type="text" maxlength="50" value="MIS-C &amp; Covid-19"></div></div></div><div class="jss9">MIS-C &amp; Covid-19_</div></div></div><div class="SaveStatus_Body-sc-1fefpx dzhDcb">Draft saved</div></div><div class="Header_MenuBarWrapper-sc-ebv0r9 bDuvpp"><div class="EditorMenuBar_Body-sc-5mokqd fschzS"><button class="MuiButtonBase-root MuiButton-root sc-jxIYkn jRkXhc MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">File</span></button><button class="MuiButtonBase-root MuiButton-root sc-jxIYkn jRkXhc MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Edit</span></button><button class="MuiButtonBase-root MuiButton-root sc-jxIYkn jRkXhc MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">View</span></button><button class="MuiButtonBase-root MuiButton-root sc-jxIYkn jRkXhc MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Run</span></button><button class="MuiButtonBase-root MuiButton-root sc-jxIYkn jRkXhc MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Add-ons</span></button><button class="MuiButtonBase-root MuiButton-root sc-jxIYkn jRkXhc MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Help</span></button></div></div></div><div class="ShareButton_ButtonWrapper-sc-asiu8k dPlevZ"><button class="sc-psCJM fTDvAv ShareButton_StyledButton-sc-1ewahb4 jNzhim" tabindex="0" role="button"><i color="#202124" sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">people</i><span class="sc-fzoxKX sc-fzoKki cyTXUp">Share</span></button></div><div class="sc-pYNsO YWalf" data-tip="true" data-for="tooltip_components_5d5cc12d-da9b-4557-841b-2ea4ed935710" currentitem="false"><button class="MuiButtonBase-root MuiButton-root jss85 MuiButton-contained" tabindex="0" type="button" style="border-radius: 4px 0px 0px 4px; color: white; background-color: rgb(0, 138, 188);"><span class="MuiButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" style="font-size: 18px; margin-right: 8px;"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1a6.875 6.875 0 0 0 0 9.79c2.73 2.71 7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58 3.51-3.47 9.14-3.47 12.65 0L21 3v7.12zM12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z"></path></svg>Save Version</span><span class="MuiTouchRipple-root"></span></button><div class="__react_component_tooltip place-bottom type-dark " id="tooltip_components_5d5cc12d-da9b-4557-841b-2ea4ed935710" data-id="tooltip" style="left: 1366px; top: 52px;"><div class="sc-oUOMp cHoHcA">Save a new version of your work.</div></div></div><div class="sc-pYNsO YWalf" data-tip="true" data-for="tooltip_components_e483eeb6-aa54-4533-9d35-0299f63cebfe" currentitem="false"><button class="MuiButtonBase-root MuiButton-root jss85 MuiButton-contained" tabindex="0" type="button" style="border-left: 1px solid rgb(218, 220, 224); border-radius: 0px 4px 4px 0px; min-width: 40px; padding: 6px 16px; color: white; background-color: rgb(0, 138, 188);"><span class="MuiButton-label">0</span><span class="MuiTouchRipple-root"></span></button><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_e483eeb6-aa54-4533-9d35-0299f63cebfe" data-id="tooltip"><div class="sc-oUOMp cHoHcA">Show versions</div></div></div><div class="Header_ToggleSidebarWrapper-sc-1lxmrkg eKTuaw"><button aria-label="Toggle sidebar visibility" title="Toggle sidebar visibility" class="sc-AxgMl jShmvg google-material-icons">last_page</button></div></div></div><div class="App_Body-sc-16c8j4p hxOBfv"><div class="Layout_Body-sc-6piylv bXAYPy"><div mode="column" class="Layout_BodyInner-sc-61tklw kCOBvM"><div class="Pane-sc-1eb69nk kVIgZB"><div class="LayoutContainer_Body-sc-1ulzvo cAISJ"><div class="ToolbarContainer_Body-sc-2h8iu7 fhvgBU"><div class="ToolbarActionsLeft_Body-sc-gd13f fipPkk"><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Add cell"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">add</i></button><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Delete cell"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">delete</i></button><div class="ToolbarActionsLeft_ToolbarSeparator-sc-1jmle0q SoAyK"></div><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Cut cell"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">content_cut</i></button><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Copy cell"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">content_copy</i></button><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Paste cell"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">content_paste</i></button><div class="ToolbarActionsLeft_ToolbarSeparator-sc-1jmle0q SoAyK"></div><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Run current cell"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">play_arrow</i></button><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli labeled" title="Run all"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">fast_forward</i><div class="ToolbarAction_Label-sc-1qf3dyz hxHqoX">Run All</div></button><div class="ToolbarActionsLeft_ToolbarSeparator-sc-1jmle0q SoAyK"></div><div class="mdc-menu-surface--anchor"><button class="sc-psCJM kvNGRI" tabindex="0" role="button"><span class="sc-fzoxKX sc-fzoKki cyTXUp">Markdown</span><i color="#202124" sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">arrow_drop_down</i></button></div></div><div class="ToolbarContainer_Spacer-sc-oz7wcc bGWfix"></div><button disabled="" class="sc-qWRQj Status_Body-sc-15eqbxr jIiEkA"><div class="SessionStatusIndicator_Body-sc-iyymxk iCUGVE"><div class="SessionStatusIndicator_StatusLeft-sc-106w180 dbJATZ"><i color="rgba(0,0,0,0.4)" sizevalue="1.125em" title="off (run a cell to start)" verticalalign="-0.125em" class="rmwc-icon google-material-icons sc-AxheI gYaGbl">circle</i><div class="SessionStatusIndicator_StatusTitle-sc-10lqtkn fLiDIV">Draft Session</div></div><div class="SessionStatusIndicator_TimerBody-sc-g3ej6t eQpXMh">off (run a cell to start)</div></div></button><div class="ToolbarActionsRight_Body-sc-1muxuky eJnDPK"><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="Start session"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">power_settings_new</i></button><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" disabled="" title="Factory reset"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">loop</i></button><button class="sc-qWRQj ToolbarAction_Body-sc-ybo8q3 Xnsli" title="More"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_vert</i></button></div></div><div class="Editor_Body-sc-1bhm27d bYniFa"><div class="sc-pTSbw gOmWnw"></div><div class="SessionlessEditor_FrameContainer-sc-1qf26to bwLGkM" style="display: flex;"><iframe name="" class="" src="./MIS-C &amp; Covid-19 _Dataset_files/jupyterlab-index-8f2399475d4c2734d3bfba35ef58a7af.html"></iframe></div><div aria-live="assertive" aria-atomic="true" aria-hidden="true" class="sc-pLxQr bBExMZ mdc-snackbar mdc-snackbar--leading"><div class="mdc-snackbar__surface"><div role="status" aria-live="polite" class="mdc-snackbar__label"><div style="display: none;"></div></div><div class="mdc-snackbar__actions"></div></div></div></div><div class="sc-pJsLC aPeCt ProgressSnackbarContainer_ProgressSnackbarWrapper-sc-avjqt1 gcwJqC"><div class="sc-pRStN jTbOhh"><div _size="xlarge" class="rmwc-circular-progress rmwc-circular-progress--size-xlarge rmwc-circular-progress--indeterminate rmwc-circular-progress--thickerstroke"><svg class="rmwc-circular-progress__circle" viewBox="0 0 48 48"><circle class="rmwc-circular-progress__path" cx="24" cy="24" r="20"></circle></svg></div></div><div class="sc-oToFz dAptBe"><div class="sc-pbJGu hLMxoa">Creating Save &amp; Run All Version</div><div class="sc-pkjoF fREvke"></div></div><div class="sc-psEpA bdrbgN"></div><div class="sc-qQwsb kWQips"><button aria-label="close" class="sc-AxgMl jShmvg sc-qYRsW cGkoRA google-material-icons">close</button><button class="sc-psCJM hqBjyr" tabindex="0" role="button"><span class="sc-fzoxKX sc-fzoKki cyTXUp">Stop</span></button></div></div></div></div></div></div><div class="Sidebar_Body-sc-14r4g35 dEilyb"><div class="sc-pmiWo hxiPWe" style="position: relative; flex-basis: 300px; display: flex; flex-direction: row; max-height: 100%; height: 100%;"><div direction="horizontal" class="sc-puGnR hDQKvH"><div role="separator" aria-orientation="horizontal"></div></div><div style="width: 300px;"><div class="Sidebar_ScrollableArea-sc-1i9c81d fIpjJt"><div class="SidebarPane_Body-sc-1owv1gk cvyfha"><div role="button" class="SidebarPane_ItemHeader-sc-13ydw5o ikWYWc"><div class="SidebarPane_TitleWrapper-sc-1mt9ft2 fXoUUG">Data</div><div class="SidebarPane_ButtonWrapper-sc-1siykkc bOIgBs"><button class="sc-psCJM koMMXk" tabindex="0" role="button"><i color="#202124" sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">add</i><span class="sc-fzoxKX sc-fzoKki cyTXUp">Add data</span></button></div><div class="SidebarPane_ChevronWrapper-sc-qm9hj3 yjdaM"><button class="MuiButtonBase-root MuiIconButton-root jss65" tabindex="0" type="button" title="Collapse Data box" style="float: right;"><span class="MuiIconButton-label"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">keyboard_arrow_up</i></span><span class="MuiTouchRipple-root"></span></button></div></div><div class="SidebarPane_ItemBody-sc-tqtqts jKIbPu"><div class="DatasetsWidget_Body-sc-vtd0he ipsOm"><div class="sc-qQWWl ljsXbq"><div class="sc-pkUyL ewEBGn"><div class="sc-qXgLg hUTRki"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">folder</i></div><p class="sc-fzoyTs sc-fzoNJl sc-pIvhh chEDYu">input<span class="sc-psdQm bWDNzk">(994.07 KB)</span></p></div><ul class="sc-pQFHc bgEcnv"><ul class="sc-oUaSW fZWUHt"><div role="button" class="sc-pkUyL sc-pZMVu WZORg"><div class="sc-qPjXN jcJAKi"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">arrow_right</i></div><div class="sc-qXgLg hUTRki"><img src="./MIS-C &amp; Covid-19 _Dataset_files/dataset-thumbnail.jpg" class="sc-pZopv bEMWvm"></div><div class="sc-oTPjJ iiFRwl"><div class="sc-pYNsO YWalf sc-pQQXS iWCqut" data-tip="true" data-for="tooltip_components_bf9461ec-1985-4de2-babb-5a23b09675f8" currentitem="false"><p class="sc-fzoyTs sc-fzoNJl sc-pIvhh chEDYu">cusersmarildownloadsmiscpdf</p><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_bf9461ec-1985-4de2-babb-5a23b09675f8" data-id="tooltip" style="left: 1426px; top: 96px;"><div class="sc-oUOMp cHoHcA">MIS-C Associated with COVID-19</div></div></div></div><div class="sc-pRrUz dQnepB"><div class="sc-qQLmQ gGVzbe"><div class="sc-qYHkt cSNLHd"><div class="sc-pYNsO YWalf" data-tip="true" data-for="tooltip_components_5e0d8ca5-926b-4ad8-a2f2-435ba8d9ec63" currentitem="false"><div role="button" class="sc-pByoR eHxtff"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">content_copy</i></div><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_5e0d8ca5-926b-4ad8-a2f2-435ba8d9ec63" data-id="tooltip"><div class="sc-oUOMp cHoHcA">Copy file path</div></div></div><div class="sc-pYNsO YWalf" data-tip="true" data-for="tooltip_components_cee8c7f7-b3d5-4a0b-9639-d93cedefb964" currentitem="false"><div role="button" class="sc-pByoR eHxtff"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">more_vert</i></div><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_cee8c7f7-b3d5-4a0b-9639-d93cedefb964" data-id="tooltip"><div class="sc-oUOMp cHoHcA">More actions</div></div></div></div><div class="mdc-menu-surface--anchor"><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE mdc-menu-surface" style="transform-origin: left top; left: 0px; top: 0px; max-height: 576.444px;"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">open_in_new</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Open in new tab</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">cached</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Check for updates</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">delete</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Remove</p></div></div></div></div></div></div></div></div></ul></ul></div><div class="sc-qQWWl ljsXbq"><div class="sc-pkUyL ewEBGn"><div class="sc-qXgLg hUTRki"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">folder</i></div><p class="sc-fzoyTs sc-fzoNJl sc-pIvhh chEDYu">output</p></div><ul class="sc-pQFHc bgEcnv"><ul class="sc-oUaSW fZWUHt"><div role="button" class="sc-pkUyL sc-pZMVu WZORg"><div class="sc-qPjXN jcJAKi"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">arrow_right</i></div><div class="sc-qXgLg hUTRki"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">folder</i></div><div class="sc-oTPjJ iiFRwl"><div class="sc-pYNsO YWalf sc-pQQXS iWCqut" data-tip="true" data-for="tooltip_components_5bc147a8-e2aa-433b-8584-32e083f3e2e5" currentitem="false"><p class="sc-fzoyTs sc-fzoNJl sc-pIvhh chEDYu">/kaggle/working</p><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_5bc147a8-e2aa-433b-8584-32e083f3e2e5" data-id="tooltip" style="left: 1398px; top: 148px;"><div class="sc-oUOMp cHoHcA">/kaggle/working (1 directories)</div></div></div></div><div class="sc-pRrUz dQnepB"><div class="sc-qQLmQ gGVzbe"><div class="sc-qYHkt cSNLHd"><div class="sc-pYNsO YWalf" data-tip="true" data-for="tooltip_components_aadafb49-34f4-4941-afd6-82b36349ec89" currentitem="false"><div role="button" class="sc-pByoR eHxtff"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">content_copy</i></div><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_aadafb49-34f4-4941-afd6-82b36349ec89" data-id="tooltip"><div class="sc-oUOMp cHoHcA">Copy file path</div></div></div></div><div class="sc-pYNsO YWalf" data-tip="true" data-for="tooltip_components_9c9da305-82b6-4ed4-b837-9d66b23d417c" currentitem="false"><div role="button" class="sc-pByoR eHxtff"><i sizevalue="18px" class="rmwc-icon google-material-icons sc-AxheI eidcZB">sync</i></div><div class="__react_component_tooltip place-top type-dark " id="tooltip_components_9c9da305-82b6-4ed4-b837-9d66b23d417c" data-id="tooltip"><div class="sc-oUOMp cHoHcA">Refresh directory contents</div></div></div></div></div></div></ul></ul></div></div></div></div><div class="SidebarPane_Body-sc-1owv1gk cvyfha"><div role="button" class="SidebarPane_ItemHeader-sc-13ydw5o ikWYWc"><div class="SidebarPane_TitleWrapper-sc-1mt9ft2 fXoUUG">Settings</div><div class="SidebarPane_ButtonWrapper-sc-1siykkc bOIgBs"></div><div class="SidebarPane_ChevronWrapper-sc-qm9hj3 yjdaM"><button class="MuiButtonBase-root MuiIconButton-root jss65" tabindex="0" type="button" title="Expand Settings box" style="float: right;"><span class="MuiIconButton-label"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">keyboard_arrow_down</i></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div class="SidebarPane_Body-sc-1owv1gk cvyfha"><div role="button" class="SidebarPane_ItemHeader-sc-13ydw5o ikWYWc"><div class="SidebarPane_TitleWrapper-sc-1mt9ft2 fXoUUG">Code Help</div><div class="SidebarPane_ButtonWrapper-sc-1siykkc bOIgBs"></div><div class="SidebarPane_ChevronWrapper-sc-qm9hj3 yjdaM"><button class="MuiButtonBase-root MuiIconButton-root jss65" tabindex="0" type="button" title="Collapse Code Help box" style="float: right;"><span class="MuiIconButton-label"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">keyboard_arrow_up</i></span><span class="MuiTouchRipple-root"></span></button></div></div><div class="SidebarPane_ItemBody-sc-tqtqts jKIbPu"><div class="Snippets_Body-sc-1qbzaco YZnhV"><div aria-live="assertive" aria-atomic="true" aria-hidden="true" class="sc-prpXb eBFEsy mdc-snackbar mdc-snackbar--leading"><div class="mdc-snackbar__surface"><div role="status" aria-live="polite" class="mdc-snackbar__label">Copied!<div style="display: none;"></div></div><div class="mdc-snackbar__actions"><i aria-hidden="true" role="button" tabindex="0" data-mdc-ripple-is-unbounded="true" class="rmwc-icon google-material-icons mdc-snackbar__dismiss mdc-ripple-upgraded--unbounded mdc-ripple-upgraded mdc-snackbar__dismiss mdc-icon-button" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:NaN; --mdc-ripple-left:0px; --mdc-ripple-top:0px;">close</i></div></div></div><div class="sc-ptSuy hGusSb Snippets_TextFieldWrapper-sc-1hz7w7a hIxpYT mdc-ripple-upgraded sc-ptSuy hGusSb Snippets_TextFieldWrapper-sc-1hz7w7a hIxpYT mdc-ripple-surface mdc-text-field mdc-text-field--upgraded mdc-text-field--outlined mdc-text-field--with-leading-icon"><i class="rmwc-icon google-material-icons mdc-text-field__icon">search</i><input type="text" margin="normal" id="textfield-wfc1se260l" class="mdc-text-field__input" value=""><div class="mdc-notched-outline mdc-notched-outline--upgraded"><div class="mdc-notched-outline__leading"></div><div class="mdc-notched-outline__notch"><label class="mdc-floating-label" for="textfield-wfc1se260l" style="">Find Code Help</label></div><div class="mdc-notched-outline__trailing"></div></div></div><div class="Snippets_Content-sc-1cgyhdq gZTAES"><div>Search for examples of how to do things</div></div></div></div></div></div></div></div></div></div><div class="sc-pmiWo hxiPWe" style="position: relative; flex-basis: 40px; display: flex; flex-direction: column;"><div direction="vertical" class="sc-puGnR guYPFo"><div role="separator" aria-orientation="horizontal"></div></div><div style="height: 40px;"><div class="Terminal_Body-sc-io7fwe byhzQX"><div class="TerminalHeader_Body-sc-1riogjs jbQKPZ"><div class="TerminalHeader_TitleWrapper-sc-bac7xk leLRuM">Console</div><button title="Show console" class="TerminalHeader_TerminalButton-sc-gq97xh TerminalHeader_TerminalTransparentButton-sc-14ic37w iFXBqD"><i sizevalue="20px" class="rmwc-icon google-material-icons sc-AxheI eidglG">keyboard_arrow_up</i></button></div></div></div></div><span></span></div></div><div class="sc-pAyMl dwWbEz"></div><div class="sc-jWtBnb egdKaT"><div aria-live="assertive" aria-atomic="true" aria-hidden="true" class="sc-pLxQr bBExMZ mdc-snackbar mdc-snackbar--leading"><div class="mdc-snackbar__surface"><div role="status" aria-live="polite" class="mdc-snackbar__label"><div style="display: none;"></div></div><div class="mdc-snackbar__actions"></div></div></div></div></div></div></div><div id="modal-root"></div><script nonce="" src="./MIS-C &amp; Covid-19 _Dataset_files/notebook-55211e17e2ad1d2e43f5.js.download"></script><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><p class="sc-fzoyTs sc-fzoNJl dZKahk">Code</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><p class="sc-fzoyTs sc-fzoNJl dZKahk">Markdown</p></div></div></div></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE SessionMenu_Menu-sc-oip47e fIzgta mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">settings_backup_restore</i><p class="sc-fzoyTs sc-fzoNJl dZKahk"><p class="sc-fzoyTs sc-fzoNJl fAwNDo">Restart &amp; Clear Cell Outputs</p></p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">info</i><p class="sc-fzoyTs sc-fzoNJl dZKahk"><p class="sc-fzoyTs sc-fzoNJl fAwNDo">View Session Metrics</p></p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">open_in_new</i><p class="sc-fzoyTs sc-fzoNJl dZKahk"><p class="sc-fzoyTs sc-fzoNJl fAwNDo">Upgrade to Google Cloud AI Notebooks</p></p></div></div></div></div><div class="sc-qPIbp iSbTMi sc-kHHUBB ezfgP mdc-menu-surface"><div role="document"><div class="sc-kNaKHI uKlPY"><ul class="km-list km-list--icon km-list--three-line sc-jOdrtS bBpixa"><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-kefRSD gvmUfX"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png"></div><div class="sc-fzoVTD Atfvz"><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw">MIS-C &amp; Covid-19</div><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Interactive Session</span><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Cancelled</span></div></div></a><div class="sc-fzoJus bPIkEp"><div class="sc-jyaUbN iWJwYl"><p class="sc-fzoXWK sc-fzpmMD iffvTX"><span>just now</span></p><div class="mdc-menu-surface--anchor"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_horiz</i></div></div></div></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-kefRSD gvmUfX"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png"></div><div class="sc-fzoVTD Atfvz"><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw">Coronavirus (COVID-19) Visualization &amp; Prediction</div><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Interactive Session</span><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Cancelled</span></div></div></a><div class="sc-fzoJus bPIkEp"><div class="sc-jyaUbN iWJwYl"><p class="sc-fzoXWK sc-fzpmMD iffvTX"><span>28 minutes</span></p><div class="mdc-menu-surface--anchor"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_horiz</i></div></div></div></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-kefRSD gvmUfX"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png"></div><div class="sc-fzoVTD Atfvz"><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw">COVID-19 India Analysis</div><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Interactive Session</span><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Cancelled</span></div></div></a><div class="sc-fzoJus bPIkEp"><div class="sc-jyaUbN iWJwYl"><p class="sc-fzoXWK sc-fzpmMD iffvTX"><span>33 minutes</span></p><div class="mdc-menu-surface--anchor"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_horiz</i></div></div></div></div></li></ul><ul class="km-list"><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-jXaBqg cxjcRH"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><div class="sc-kMBVBR gNoRYI"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-jTwkGF llSFot">auto_awesome_motion</i><div class="sc-jYPaMM dHhBSb">0</div></div></div><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw"><p class="sc-fzoyTs sc-fzoNJl gKAukH">0 Active Events</p></div></div></a><div class="sc-fzoJus bPIkEp"><i emphasis="high" sizevalue="24px" role="button" tabindex="0" class="rmwc-icon google-material-icons sc-AxheI eidhRm">expand_more</i></div></div></li></ul></div></div></div><div class="sc-qPIbp iSbTMi sc-kHHUBB ezfgP mdc-menu-surface"><div role="document"><div class="sc-kNaKHI uKlPY"><ul class="km-list km-list--icon km-list--three-line sc-jOdrtS bBpixa"><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-kefRSD gvmUfX"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png"></div><div class="sc-fzoVTD Atfvz"><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw">MIS-C &amp; Covid-19</div><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Interactive Session</span><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Cancelled</span></div></div></a><div class="sc-fzoJus bPIkEp"><div class="sc-jyaUbN iWJwYl"><p class="sc-fzoXWK sc-fzpmMD iffvTX"><span>just now</span></p><div class="mdc-menu-surface--anchor"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_horiz</i></div></div></div></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-kefRSD gvmUfX"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png"></div><div class="sc-fzoVTD Atfvz"><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw">Coronavirus (COVID-19) Visualization &amp; Prediction</div><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Interactive Session</span><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Cancelled</span></div></div></a><div class="sc-fzoJus bPIkEp"><div class="sc-jyaUbN iWJwYl"><p class="sc-fzoXWK sc-fzpmMD iffvTX"><span>28 minutes</span></p><div class="mdc-menu-surface--anchor"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_horiz</i></div></div></div></div></li><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-kefRSD gvmUfX"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><img src="./MIS-C &amp; Covid-19 _Dataset_files/default-thumb.png"></div><div class="sc-fzoVTD Atfvz"><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw">COVID-19 India Analysis</div><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Interactive Session</span><span class="sc-fzqBkg sc-fzqPZZ sc-fznyYp hliFDS">Cancelled</span></div></div></a><div class="sc-fzoJus bPIkEp"><div class="sc-jyaUbN iWJwYl"><p class="sc-fzoXWK sc-fzpmMD iffvTX"><span>33 minutes</span></p><div class="mdc-menu-surface--anchor"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm">more_horiz</i></div></div></div></div></li></ul><ul class="km-list"><li class="sc-fzoaKM hNuJKS"><div class="sc-fzomuh bSASvE sc-jXaBqg cxjcRH"><a class="sc-fzowVh equHBw"><div class="sc-fzqAui eoGDzK"><div class="sc-fzqMdD fZQoNm"><div class="sc-kMBVBR gNoRYI"><i emphasis="high" sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-jTwkGF llSFot">auto_awesome_motion</i><div class="sc-jYPaMM dHhBSb">0</div></div></div><div class="sc-Axmtr sc-fzoiQi sc-fzpisO eJTVEw"><p class="sc-fzoyTs sc-fzoNJl gKAukH">0 Active Events</p></div></div></a><div class="sc-fzoJus bPIkEp"><i emphasis="high" sizevalue="24px" role="button" tabindex="0" class="rmwc-icon google-material-icons sc-AxheI eidhRm">expand_more</i></div></div></li></ul></div></div></div><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./MIS-C &amp; Covid-19 _Dataset_files/anchor.html" width="256" height="60" role="presentation" name="a-q66qasgo0h73" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./MIS-C &amp; Covid-19 _Dataset_files/saved_resource.html"></iframe></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE sc-kjyHYK jTvqJp mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">edit</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Edit</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">clear</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Dismiss</p></div></div></div></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE sc-kjyHYK jTvqJp mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">edit</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Edit</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">clear</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Dismiss</p></div></div></div></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE sc-kjyHYK jTvqJp mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">edit</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Edit</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">clear</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Dismiss</p></div></div></div></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE sc-kjyHYK jTvqJp mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">edit</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Edit</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">clear</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Dismiss</p></div></div></div></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE sc-kjyHYK jTvqJp mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">edit</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Edit</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">clear</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Dismiss</p></div></div></div></div><div aria-hidden="true" class="mdc-menu sc-fzonjX geSBQE sc-kjyHYK jTvqJp mdc-menu-surface"><div role="menu" class="mdc-list mdc-menu__items mdc-list"><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">edit</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Edit</p></div></div><div role="menuitem" tabindex="0" class="sc-fzoOEf jLEnlj mdc-ripple-upgraded sc-fzoOEf jLEnlj mdc-list-item"><div class="sc-fzppip logiML"><i sizevalue="24px" class="rmwc-icon google-material-icons sc-AxheI eidhRm sc-fzpdyU bpAxtW">clear</i><p class="sc-fzoyTs sc-fzoNJl dZKahk">Dismiss</p></div></div></div></div></body></html>
