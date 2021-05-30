@@ -1,0 +1,10 @@
+Sample output 1 :
+
+{'label': 'POSITIVE', 'score': 0.9998606443405151}
+Depicting that the sentence is having positive sentiment with a confidence of 99.98%.
+
+
+Sample output 2 :
+
+{'label': 'NEGATIVE', 'score': 0.9997904896736145}
+Depicting that the sentence is having negative sentiment with a confidence of 99.979%.

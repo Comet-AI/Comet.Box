@@ -1,0 +1,8 @@
+Sample Input 1 : 
+
+I am very delighted to share that I have been selected for GSSoC'21.
+
+
+Sample Input 2 :
+
+This pandemic has been really ruined so many homes ,made so many people jobless ,that is very difficult to amend.
