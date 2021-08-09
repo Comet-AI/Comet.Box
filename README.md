@@ -148,7 +148,7 @@
   
   ### Want to Contribute or join us?
   
-  **🚀 To contribute to Comet Box repository raise an issue in the git-repo or dm on LinkedIn**
+  **🚀 To contribute to Comet.Box repository raise an issue in the git-repo or dm on LinkedIn**
    - Ritesh - [Ritesh](https://www.linkedin.com/in/ritesh-yadav2011/)
    
   **📧 To Join us Shoot a mail to**
