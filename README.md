@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-<img align="right" width="159px" src="https://github.com/Comet-AI/Comet.Box/blob/main/utils/output-onlinepngtools.png">
+<img align="right" width="159px" src="https://github.com/Comet-AI/Comet.Box/blob/main/utils/comet.png">
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Comet-AI/Comet.Box?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/Comet-AI/Comet.Box?style=social)
