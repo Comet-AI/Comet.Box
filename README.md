@@ -1,4 +1,4 @@
-# CoinShift Imaging Box 📦📦
+# Comet Box 📦📦
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -9,15 +9,15 @@
 ![GitHub issues](https://img.shields.io/github/issues/CoinShift-Imaging/CoinShift-Imaging-Box)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-### **CoinShift Imaging Box:** A collection of efficient and fast implementation of SOTA Object Detection and Segementation Models.
+### **Comet Box:** A collection of efficient and fast implementation of SOTA Object Detection,Segementation and NLP Models.
 
-### Why CoinShift Imaging?
+### Why Comet Box?
 
 * Want to get Started with Advanced Computer Vision and NLP?
-    * Coinshift provides you a large variety of Computer Vision and NLP pipelines.
+    * Comet Box provides you a large variety of Computer Vision and NLP pipelines.
     
 * Want to run high-end, the latest state-of-the-art models, but you lack GPU and RAM?
-    * All implementation in CoinShift is done using Google Collab or Kaggle Kernels
+    * All implementation in Comet Box is done using Google Collab or Kaggle Kernels
     
 ### Some key Features!!
 
@@ -27,11 +27,11 @@
 * Train your model over customer data very easily.
 ```
 
-### **Who can use the CoinShift Imaging Box?**
+### **Who can use the Comet Box?**
 
-🚩 CoinShift Imaging Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models, and Algorithms.
+🚩 Comet Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models, and Algorithms.
 
-🚩 CoinShift only provides you a basic template to kick start your initial part on any Detection, Segementation, Gans, NLP project or task. You would still need to add some custom cfg and other files according to your datasets or corpus.
+🚩 Comet only provides you a basic template to kick start your initial part on any Detection, Segementation, Gans, NLP project or task. You would still need to add some custom cfg and other files according to your datasets or corpus.
 
 ## Important Elements
 
@@ -148,7 +148,7 @@
   
   ### Want to Contribute or join us?
   
-  **🚀 To contribute to CoinShift Imaging Box repository raise an issue in the git-repo or dm on LinkedIn**
+  **🚀 To contribute to Comet Box repository raise an issue in the git-repo or dm on LinkedIn**
    - Ritesh - [Ritesh](https://www.linkedin.com/in/ritesh-yadav2011/)
    
   **📧 To Join us Shoot a mail to**
