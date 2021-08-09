@@ -1,20 +1,20 @@
-# Comet Box 📦📦
+# Comet.Box 📦📦
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-<img align="right" width="159px" src="https://github.com/DARK-art108/CoinShift-Imaging/blob/main/utils/output-onlinepngtools.png">
+<img align="right" width="159px" src="https://github.com/Comet-AI/Comet.Box/blob/main/utils/output-onlinepngtools.png">
 
-![GitHub contributors](https://img.shields.io/github/contributors/CoinShift-Imaging/CoinShift-Imaging-Box?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/CoinShift-Imaging/CoinShift-Imaging-Box?style=social)
-![GitHub issues](https://img.shields.io/github/issues/CoinShift-Imaging/CoinShift-Imaging-Box)
+![GitHub contributors](https://img.shields.io/github/contributors/Comet-AI/Comet.Box?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Comet-AI/Comet.Box?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Comet-AI/Comet.Box)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-### **Comet Box:** A collection of efficient and fast implementation of SOTA Object Detection,Segementation and NLP Models.
+### **Comet.Box:** A collection of efficient and fast implementation of SOTA Object Detection,Segementation and NLP Models.
 
-### Why Comet Box?
+### Why Comet.Box?
 
 * Want to get Started with Advanced Computer Vision and NLP?
-    * Comet Box provides you a large variety of Computer Vision and NLP pipelines.
+    * Comet.Box provides you a large variety of Computer Vision and NLP pipelines.
     
 * Want to run high-end, the latest state-of-the-art models, but you lack GPU and RAM?
     * All implementation in Comet Box is done using Google Collab or Kaggle Kernels
@@ -27,11 +27,11 @@
 * Train your model over customer data very easily.
 ```
 
-### **Who can use the Comet Box?**
+### **Who can use the Comet.Box?**
 
-🚩 Comet Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models, and Algorithms.
+🚩 Comet.Box templates are meant for those people who have intermediate knowledge of Object Detection, Segementation models, and Algorithms.
 
-🚩 Comet only provides you a basic template to kick start your initial part on any Detection, Segementation, Gans, NLP project or task. You would still need to add some custom cfg and other files according to your datasets or corpus.
+🚩 Comet.Box only provides you a basic template to kick start your initial part on any Detection, Segementation, Gans, NLP project or task. You would still need to add some custom cfg and other files according to your datasets or corpus.
 
 ## Important Elements
 
